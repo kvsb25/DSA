@@ -1,0 +1,5 @@
+Vector
+    #include<vector>
+    sort(vec.begin(), vec.end()); // sorts the vector from starting ele to last ele. vec.begin() returns an iterator similar saying index 0, same for vec.end() -> index n-1
+    sort(vec.begin()+1, vec.end()); // the second parameter of this function takes the iterator before which the vec is to be sorted
+    sort(vec.begin(), vec.begin()+n);
