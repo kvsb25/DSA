@@ -3,3 +3,9 @@ Vector
     sort(vec.begin(), vec.end()); // sorts the vector from starting ele to last ele. vec.begin() returns an iterator similar saying index 0, same for vec.end() -> index n-1
     sort(vec.begin()+1, vec.end()); // the second parameter of this function takes the iterator before which the vec is to be sorted
     sort(vec.begin(), vec.begin()+n);
+
+Set
+    This is a container that stores unique elements in a sorted order.
+    does not store duplicate values - ordered set: stores elements in a sorted order, unordered set: stores elements in an unordered fashion
+    ordered_set<int> st;
+    st.find(value); // returns iterator pointing to the found element based on value which was passed as parameter. If the element of that value doesn't exist it returns 'st.end();' iterator
