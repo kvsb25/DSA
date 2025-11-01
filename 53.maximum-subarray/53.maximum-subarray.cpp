@@ -20,9 +20,13 @@ public:
             }
 
             total += n;
+
+            // store the maximum total obtain for an iteration
             res = max(res, total);
         }
 
         return res;
     }
 };
+
+// this approach ignores the addition of an entire sequence of numbers (which may include positives) if their cumulative sum becomes negative. 
