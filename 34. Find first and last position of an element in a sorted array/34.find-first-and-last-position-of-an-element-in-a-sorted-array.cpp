@@ -10,12 +10,12 @@ public:
                 s = m+1;
             } else if(nums[m]>target){
                 e = m-1;
-            } else {
+            } else { // when nums[m] is equal to target
                 ans = m;
                 if(leftBias){
-                    e = m-1;
+                    e = m-1; // search the left half of the array to find the first position of the target element
                 } else {
-                    s = m+1;
+                    s = m+1; // search the right half of the array to find the last position of the target element
                 }
             }
         }
