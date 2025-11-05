@@ -17,7 +17,7 @@ public:
     int search(vector<int>& nums, int target) {
         int n = nums.size()-1;
         int breakPt = -1;
-        // find the breaking point
+        // find the breaking point (pivot index at which the array is rotated)
         for ( int i = n-1; i>=0; i--){
             if(nums[i]>nums[i+1]){
                 breakPt = i;
