@@ -50,3 +50,5 @@ class Solution {
         return merge(root, list2);
     }
 };
+
+// divide and conquer
