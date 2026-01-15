@@ -10,7 +10,7 @@ public:
         for(auto n : nums){
             currSum += n;
             int diff = currSum - k; // diff variable to know what prefix sum to be removed from the currSum to get 'k'
-            res += prefixSum[diff]; // prefix[diff] tells the count of subarray that gives the 'diff' as sum (which would be the prefix sum for currSum).
+            if(prefixSum.find(diff) != prefixSum.end) res += prefixSum[diff]; // prefix[diff] tells the count of subarray that gives the 'diff' as sum (which would be the prefix sum for currSum).
             // So the count of prefix subarray (prefix[diff]) would be the same as the number of subarrays that give 'k' as sum
             prefixSum[currSum]++; // recording the currSum, as prefix, as it would be the prefix for the upcoming sums
         }
