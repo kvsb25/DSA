@@ -6,7 +6,7 @@ public:
         while(r<s.size()){
             mp[s[r]]++;
             maxFreq = max(maxFreq, mp[s[r]]);
-            if((r-l+1)-maxFreq > k){
+            if((r-l+1)-maxFreq > k){    // (r-l+1)-maxFreq gives the number of characters that can be changed to get a consecutive sequence
                 mp[s[l]]--;
                 l++;
             }
@@ -20,7 +20,7 @@ public:
 };
 
 // increase right pointer always, and do whatever is necessary at every step (in this case it is calculating max freq char)
-// increase left pointer (or shrink the subarray) only when conditions are not met 
+// increase left pointer (or shrink the subarray) only when conditions are not met (generally greater than is considered)
 //      (in this case the characters in the substring that can be converted should be less than 'k')
 //      [chars that can be converted (in the substring) to give the max length of consecutive same char = length of the substring - the most appearing character]
 // compute the answer when the conditions are met
