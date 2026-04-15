@@ -32,3 +32,5 @@ public:
         return ans;
     }
 };
+
+// NOTE: the stack keeps track of those nodes whose right subtree has not yet been explored
