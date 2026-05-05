@@ -14,25 +14,25 @@ public:
     vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
         if(root == NULL) return {};
         vector<vector<int>> ans;
-        queue<TreeNode*> st;
-        st.push(root);
+        queue<TreeNode*> q;
+        q.push(root);
 
         bool leftToRight = true;
 
-        while(!st.empty()){
-            int size = st.size();
-            vector<int> list(size);
+        while(!q.empty()){
+            int size = q.size();
+            vector<int> list(size); // initialize here only to dogde out of bounds error
             for(int i = 0; i<size; i++){
-                TreeNode* node = st.front(); 
-                st.pop();
+                TreeNode* node = q.front(); 
+                q.pop();
 
                 int index = (leftToRight) ? i : size - 1 - i;
                 list[index] = (node->val);
 
-                if(node->left != NULL) st.push(node->left);
-                if(node->right != NULL) st.push(node->right);
+                if(node->left != NULL) q.push(node->left);
+                if(node->right != NULL) q.push(node->right);
             }
-            leftToRight = !leftToRight; 
+            leftToRight = !leftToRight; // toggle traversal direction after each level traversal
             ans.push_back(list);
         }
 

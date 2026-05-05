@@ -14,17 +14,17 @@ public:
     vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
         if(root == NULL) return {};
         vector<vector<int>> ans;
-        queue<TreeNode*> st;
-        st.push(root);
+        queue<TreeNode*> q;
+        q.push(root);
 
-        while(!st.empty()){
-            int size = st.size();
+        while(!q.empty()){
+            int size = q.size();
             vector<int> list;
             for(int i = 0; i<size; i++){
-                TreeNode* node = st.front(); 
-                st.pop();
-                if(node->left != NULL) st.push(node->left);
-                if(node->right != NULL) st.push(node->right);
+                TreeNode* node = q.front(); 
+                q.pop();
+                if(node->left != NULL) q.push(node->left);
+                if(node->right != NULL) q.push(node->right);
                 list.push_back(node->val);
             }
             ans.push_back(list);

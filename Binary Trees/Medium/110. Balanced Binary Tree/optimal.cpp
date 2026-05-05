@@ -19,7 +19,7 @@ public:
         if(hLeft == -1 || hRight == -1) return -1;
         if(abs(hLeft-hRight) > 1) return -1;
 
-        return 1+max(height(root->left), height(root->right));
+        return 1+max(hLeft, hRight);
     }
 
     bool isBalanced(TreeNode* root) {
