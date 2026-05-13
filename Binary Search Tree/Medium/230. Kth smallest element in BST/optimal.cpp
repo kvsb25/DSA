@@ -9,22 +9,30 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    int kthSmallest(TreeNode* root, int k) {
-        stack<TreeNode*> st;
-        TreeNode* node = root;
+    int kthSmallest(TreeNode *root, int k)
+    {
+        stack<TreeNode *> st;
+        TreeNode *node = root;
         int count = 0;
-        while(true){
-            if(node !=NULL){
+        while (true)
+        {
+            if (node != NULL)
+            {
                 st.push(node);
                 node = node->left;
-            } else {
-                if(st.empty()) break;
+            }
+            else
+            {
+                if (st.empty()) break;
+                
                 node = st.top();
                 st.pop();
                 count++;
-                if(count == k){
+                if (count == k)
+                {
                     return node->val;
                 }
                 node = node->right;
@@ -34,6 +42,6 @@ public:
     }
 };
 
-// Timecomplexity = O(height of tree) 
+// Timecomplexity = O(height of tree)
 // SpaceComplexity = O(height of tree) because max elements stored at a time in the stack will be equal to the height of the tree, because we be popping elements whose left has been visited.
-// Heigh of tree = Log N when the binary search tree is balanced 
+// Heigh of tree = Log N when the binary search tree is balanced
