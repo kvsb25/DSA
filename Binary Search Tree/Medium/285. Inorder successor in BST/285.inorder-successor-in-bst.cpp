@@ -32,3 +32,6 @@ class Solution {
         return succ;
     }
 };
+
+// Time complexity O(H); H = height of tree
+// Space Complexity O(1);
