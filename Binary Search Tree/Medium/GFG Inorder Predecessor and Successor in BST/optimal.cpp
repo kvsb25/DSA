@@ -21,6 +21,8 @@ class Solution {
         Node* temp = root;
         
         while(temp != NULL || root != NULL){
+
+            // find predecessor
             if(temp != NULL){
                 if(temp->data < key){
                     pred = temp;
@@ -30,6 +32,7 @@ class Solution {
                 }
             }
             
+            // find successor
             if(root != NULL){
                 if(root->data > key){
                     succ = root;
