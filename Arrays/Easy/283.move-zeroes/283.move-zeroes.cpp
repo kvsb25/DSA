@@ -14,3 +14,6 @@ public:
         }
     }
 };
+
+// if it is a zero increament the total count and move
+// if it is not a zero swap it with the first zero (whose index is [i-count])

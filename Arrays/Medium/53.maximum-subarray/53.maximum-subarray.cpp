@@ -11,8 +11,8 @@ public:
         {
             // Logic: If the current sum (`total`) is negative,
             // If the current running sum (`total`) is negative, carrying it forward only reduces the overall sum.
-            // Starting fresh at 'n' (by resetting total to 0) is always the better choice.
-            // Mathematically: Since (total < 0), then (total + n) < (0 + n).
+            // Starting fresh at 'n' (by resetting total to 0) is always the better choice. 
+            // Mathematically: If (total < 0), then (total + n) < (0 + n).
             // Therefore, we reset `total` to 0 to start a new, potentially optimal subarray from 'n'.
             if (total < 0)
             {
