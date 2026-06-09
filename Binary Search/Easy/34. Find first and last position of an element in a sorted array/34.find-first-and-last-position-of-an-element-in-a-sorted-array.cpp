@@ -13,9 +13,9 @@ public:
             } else { // when nums[m] is equal to target
                 ans = m;
                 if(leftBias){
-                    e = m-1; // search the left half of the array to find the first position of the target element
+                    e = m-1; // search the left half of the array to find the first position of the target element // search for upper bound
                 } else {
-                    s = m+1; // search the right half of the array to find the last position of the target element
+                    s = m+1; // search the right half of the array to find the last position of the target element //search for lower bound
                 }
             }
         }
@@ -27,3 +27,7 @@ public:
         return {first, last};
     }
 };
+
+// OR you could just find the UB index and LB index
+// UB would be the first occurance, and LB would be the last occurance
+// UB = Upper Bound; LB = Lower Bound

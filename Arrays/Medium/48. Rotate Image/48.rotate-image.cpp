@@ -14,3 +14,8 @@ public:
         }
     }
 };
+
+// transpose the matrix
+// and then reverse each row 
+// this will give you 90deg rotation of the matrix
+// just transpose the matrix this will give you 180deg rotation of the matrix
