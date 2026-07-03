@@ -28,7 +28,7 @@ public:
             // compute possible minimized max sum 
             int mid = start + (end-start)/2;
 
-            // if with that possible answer if the array can be split
+            // if with that possible answer the array can split
             if(canSplit(nums, k, mid)){ 
                 end = mid - 1; // then find a lower possible answer
             } else { // else 
@@ -41,3 +41,7 @@ public:
 
 // the least answer for the minimized max sum would be the largest element in the input array
 // and the largest answer for the minimized max would be the sum of input array (to be exact - it will be the largest sum among the split subarrays, but to compute that would be inefficient so directly considering the sum of the array to be the largest answer)
+
+// can we have a split where mid is the largest sum among the split arrays,
+// if yes then find a greater value for mid where a split can exist with mid as the largest sum
+// else move to the smaller value of mid where a split is possible
