@@ -29,3 +29,7 @@ public:
         return (int)(sign*res);
     }
 };
+
+// 1. ignore leading white spaces
+// 2. handle sign
+// 3. handle digits and overflow

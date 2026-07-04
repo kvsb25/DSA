@@ -21,3 +21,7 @@ public:
 // a single char in any map cannot point to two distinct characters, if so return false
 // if mapping for current char in 's' exists and it maps to something else other than the current char in 't', then the strings are not isomorphic
 // IF CHAR OF STRING 's' PAIRS WITH CHAR OF STRING 't' ONCE, THEN THEY MUST PAIR WITH EACH OTHER EVERY SINGLE TIME.
+
+// Main thing is, for every char in s or in t the mapping of that character should be same.
+
+// if a mapping for the current element exists then it should be same as the current element of the target string
