@@ -24,7 +24,9 @@ public:
                 if(st.empty()) break; 
                 node = st.top();
                 st.pop();
-                ans.push_back(node->val);
+
+                ans.push_back(node->val); // processing the node
+                
                 node = node->right;
             }
         }
@@ -34,6 +36,6 @@ public:
 };
 
 // NOTE: the stack keeps track of those nodes whose right subtree has not yet been explored
-// meaning the stack contains those elements whose left subtree is being explored and if the left subtree has been explored then the element is popped from the stack.
+// meaning the stack contains those elements whose left subtree is being explored and if the left subtree has been explored then it's exploration of right start's hence the element is popped from the stack.
 // How do we know if the left subtree has been explored? -> when we encounter a null node then the top of stack's left subtree has been explored hence we can pop it and check it's right subtree (hence node = node->right).
 // since we always moved to the left of the node, if we encounter a null element this would mean that we have explored the left subtree of the latest parent in the stack, hence according to inorder traversal it is time to record the element in the traversal and find the inorder traversal of the right subtree
