@@ -14,6 +14,7 @@ public:
                 if(i%(m-1) == 0 || j%(n-1) == 0){
                     if(board[i][j] == 'O'){
                         q.push({i,j});
+                        board[i][j] = '-';
                     }
                 }
             }
@@ -28,6 +29,7 @@ public:
                 int nx = x+dx, ny = y+dy;
                 if(nx < m && ny < n && nx >= 0 && ny >= 0 && board[nx][ny] == 'O'){
                     q.push({nx,ny});
+                    board[nx][ny] = '-';
                 }
             }
         }
