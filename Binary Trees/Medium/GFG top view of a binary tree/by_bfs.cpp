@@ -31,6 +31,7 @@ class Solution {
             int col = it.second;
             
             if(mp.find(col) == mp.end()) mp[col] = node->data;
+            // if(mp.count(col) < 0) mp[col] = node->data;
             
             if(node->left != NULL){
                 q.push({node->left, col-1});
